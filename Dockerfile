@@ -1,14 +1,7 @@
-# Use node:24.16-alpine
 FROM node:14.16-alpine
-# Set the working directory to /app
 WORKDIR /app
-# Copy the dependancies 
 COPY package*.json ./
-# Run the command to install dependancies
-RUN npm install 
-# Copy all the files
+RUN npm install
 COPY . .
-# Expose the correct port
 EXPOSE 5000
-# Specify the command to run on start-up
-ENTRYPOINT ["npm", "start"]
+CMD ["npm", "start"]
