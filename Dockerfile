@@ -1,5 +1,5 @@
 # Use node:24.16-alpine
-FROM node:24.16-alpine
+FROM node:14.16-alpine
 # Set the working directory to /app
 WORKDIR /app
 # Copy the dependancies 
